@@ -17,7 +17,7 @@
     ],
   };
 
-  function run(): void {
+  function run(): void { //타입스크립트는 반환값이 없을 때 void이용해서 명시하게됨
     let rendredResult = printTableHTML(koreanFoods);
     rendredResult = removeSpaceString(rendredResult);
     console.log(rendredResult);
@@ -59,9 +59,9 @@
               </tr>
             `
           )
-          .join('')}
+          .join('')} 
       </table>
-    `;
+    `; // join활용해서 문자열로 만들기
   }
 
   function renderTable(data: {

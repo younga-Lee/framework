@@ -19,4 +19,8 @@
 // 11. promise & async - await
 // 12. ES Modules
 // 13. class
-console.log('TypeScript 파일 수정');
+// console.log('TypeScript 파일 수정');
+
+import * as EsModules from './12-es-modules.js';
+
+console.log(EsModules);

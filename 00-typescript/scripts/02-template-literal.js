@@ -16,6 +16,7 @@
         console.log(rendredResult);
         // return undefined;
     }
+    // 공백제거
     function removeSpaceString(data) {
         return data
             .replace(/(\s+<$|>\s+)/g, ($1) => {
@@ -36,7 +37,7 @@
       <table class="table">
         <caption class="sr-only">${data.caption}</caption>
         ${data.rows
-            .map((item) => `
+            .map((item) => ` 
               <tr>
                 <th>${item.headline}</th>
                 <td>${item.content}</td>

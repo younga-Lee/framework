@@ -101,7 +101,7 @@
     const rendredResult = renderTable(koreanFoods);
     console.log(rendredResult);
 
-    // any 타입 검사 안할거에요!
+    // any 타입 검사 안할거에요! -> data: any
     // 그러면 TypeScript를 왜 사용하나요?
     // 타입 검사 (무시)
     function renderTable(data: KoreanFoods) {

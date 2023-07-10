@@ -17,7 +17,7 @@
         console.log('isNullOrUndefined : ', result);
         // 코드를 작성합니다.
         // null 병합 연산자 활용
-        result = value !== null && value !== void 0 ? value : 100;
+        result = value !== null && value !== void 0 ? value : 100; // value가 없으면 100으로 초기화
         console.log('nullish : ', result);
     }
     function optionalChaining() {

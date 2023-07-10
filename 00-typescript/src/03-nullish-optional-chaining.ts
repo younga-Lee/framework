@@ -57,8 +57,9 @@
       console.log('typeof : ', name);
 
       // 코드를 작성합니다.
-      name = topic.getName?.();
+      name = topic.getName?.(); 
     }
+    // .? : Optional chaining (해당 속성 또는 메서드가 존재하는지 여부를 확인하고, 존재하지 않으면 에러를 발생시키지 않고 undefined를 반환)
 
     let title, name;
   }

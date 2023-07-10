@@ -28,11 +28,13 @@
     }
     function combineObject() {
         const defaultOptions = {
+            //필수
             startIndex: 0,
             loop: false,
             usingAria: true,
         };
         const customOptions = {
+            //옵션
             loop: true,
             // startIndex: 0,
             // usingAria: true,

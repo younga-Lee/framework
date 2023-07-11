@@ -13,8 +13,17 @@
 // 아래 코드는 여러 기능이 복합적으로 엉켜 있어 순수하지 못합니다.
 // 코드를 "순수" 함수와 "부수 효과"를 처리하는 함수로 나눠 재구성합니다.
 
-function render(node) {
+function setLoading(isLoading = false, node) {
+  if (!node || node.nodeType !== document.ELEMENT_NODE){
+    throw new Error('....');
+  }
   node.innerHTML = 'Loading...';
+}
+
+
+function sideEffects(node) {
+  setLoading(true, node);
+
 
   fetch('https://random-data-api.com/api/v2/beers')
     .then((response) => response.json())
@@ -34,7 +43,7 @@ function render(node) {
           </ul>
         `
       );
-      node.innerHTML = '';
+      
       node.append(beerElement);
     })
     .catch((error) => console.error(error.message));
@@ -42,4 +51,4 @@ function render(node) {
 
 const rootElement = document.getElementById('root');
 
-render(rootElement);
+sideEffects(rootElement);

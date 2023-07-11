@@ -6,21 +6,26 @@
 // - 동일한 입력 값에 대해 항상 동일한 출력 값을 보장하므로 코드의 예측 가능성을 높입니다.
 // ----------------------------------------------------------------------------
 
-// [순수 함수의 요건]
+// [순수 함수의 요건] : 예측가능
 // 1. 동일한 입력이 주어지면 항상 동일한 출력을 반환해야 합니다.
 // 2. 불순한 것을 포함해서는 안됩니다. (불순: side-effects)
 
 // 아래 함수 중 순수하지 않은 것은 무엇일까요?
 
+
+//이거는 순수함
 function printTopic(topic) {
   return `[printTopic] "${topic}"에 대해 관심을 갖고 학습합니다.`;
 }
 
+
+//node가 어떻게 동작하는지 모르기 때문에 불순함
 function renderTopic(topic, node) {
   const topicContent = `[renderTopic] "${topic}"에 대해 관심을 갖고 학습합니다.`;
   node.textContent = topicContent;
 }
 
+//side effect를 포함하기 때문에 불순함
 function fetchTopic(topic, size = 2) {
   fetch(`https://random-data-api.com/api/v2/beers?size=${size}`)
     .then((response) => response.json())

@@ -110,3 +110,9 @@
 - `pnpm dev` : 구동
 - `pnpm add react react-dom` : react-dom설치
 - `pnpm add -D @vitejs/plugin-react` : 플러그 설치
+- `pnpm create @eslint/config` 
+
+- 정적 에셋 vs 동적 에셋
+    - 정적 에셋은 public폴더내에 파일 존재, 변화가 없다면 정적에셋을 사용
+    - 동적 에셋은 서버에서 실시간으로 데이터를 가져옴, 수시로 파일이 바뀐다면 동적 에셋을 사용하는 것이 나음
+    - 상황에 따라 다르게 적용할 수 있어야 함

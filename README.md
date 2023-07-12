@@ -103,4 +103,10 @@
 ---
 
 ## 2. 점진적인 React 라이브러리
-### 예제
+
+## 3. vite 프론트엔드 개발도구
+- `pnpm add -D vite` : 설치
+- vite.config.js
+- `pnpm dev` : 구동
+- `pnpm add react react-dom` : react-dom설치
+- `pnpm add -D @vitejs/plugin-react` : 플러그 설치

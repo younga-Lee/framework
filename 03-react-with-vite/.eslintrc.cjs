@@ -1,11 +1,17 @@
 module.exports = {
     "env": {
         "browser": true,
-        "es2021": true
+        "es2021": true,
+        "node": true,
     },
+    "plugins": [
+        "react", "jsx-a11y"],
     "extends": [
         "eslint:recommended",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "plugin:react/jsx-runtime",
+        "plugin:react-hooks/recommended",
+        "plugin:jsx-a11y/recommended",
     ],
     "overrides": [
         {
@@ -16,7 +22,7 @@ module.exports = {
                 ".eslintrc.{js,cjs}"
             ],
             "parserOptions": {
-                "sourceType": "script"
+                "sourceType": "script",
             }
         }
     ],
@@ -24,9 +30,5 @@ module.exports = {
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
-    "plugins": [
-        "react"
-    ],
-    "rules": {
-    }
+    
 }
